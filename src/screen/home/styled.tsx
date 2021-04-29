@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
@@ -21,15 +21,30 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
+const rotate = keyframes`  
+0%   {color: red;}
+25%  {color: yellow;}
+50%  {color: blue;}
+100% {color: green;}
+`;
 type Color = {
   color: string;
+  animation?: boolean;
 };
 export const Title = styled.h1<Color>`
   color: ${(props) => props.color};
   padding: 0px;
   margin: 0px;
   font-size: 100px;
+
+  ${(props) =>
+    props.animation
+      ? css`
+          animation: ${rotate} 2s linear infinite;
+        `
+      : null}
 `;
+
 export const ActionButton = styled.button`
   width: 300px;
   height: 55px;
@@ -70,5 +85,6 @@ export const Colors = styled.div<Color>`
   }
 
   &:last-child {
+    border-bottom-right-radius: 50px;
   }
 `;

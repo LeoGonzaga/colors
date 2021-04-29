@@ -14,7 +14,9 @@ const HomeScreen = (): JSX.Element => (
   <Container>
     <LeftColumn>
       <Wrapper>
-        <Title color="#AD12B0">Colors</Title>
+        <Title color="#AD12B0" animation>
+          Colors
+        </Title>
         <Title color="#fff">and</Title>
         <Title color="#7B7B74">Criative</Title>
       </Wrapper>
