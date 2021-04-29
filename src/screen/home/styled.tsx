@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-  width: 40vw;
+  width: 50vw;
   height: 100%;
   background-color: #000;
   display: flex;
@@ -36,10 +36,39 @@ export const ActionButton = styled.button`
   border-radius: 4px;
   background-color: #fff;
   border: none;
+  outline: none;
   transition: 0.2s ease;
   font-weight: bold;
   &:hover {
     background-color: #5c0db6;
     color: #fff;
+  }
+`;
+
+export const RightColumn = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  align-items: flex-start;
+`;
+
+export const ColorsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+export const Colors = styled.div<Color>`
+  height: 90px;
+  margin: 0px;
+  width: 50vw;
+  background-color: ${(props) => props.color};
+
+  &:first-child {
+    border-top-right-radius: 50px;
+  }
+
+  &:last-child {
   }
 `;

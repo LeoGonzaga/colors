@@ -1,5 +1,14 @@
 import React from "react";
-import { ActionButton, Container, LeftColumn, Title, Wrapper } from "./styled";
+import {
+  ActionButton,
+  Colors,
+  ColorsContainer,
+  Container,
+  LeftColumn,
+  RightColumn,
+  Title,
+  Wrapper,
+} from "./styled";
 
 const HomeScreen = (): JSX.Element => (
   <Container>
@@ -11,6 +20,15 @@ const HomeScreen = (): JSX.Element => (
       </Wrapper>
       <ActionButton>Gerar paleta</ActionButton>
     </LeftColumn>
+    <RightColumn>
+      <ColorsContainer>
+        <Colors color="#EDA751" />
+        <Colors color="#F1642E" />
+        <Colors color="#DF5243" />
+        <Colors color="#C9384A" />
+        <Colors color="#6C121D" />
+      </ColorsContainer>
+    </RightColumn>
   </Container>
 );
 
