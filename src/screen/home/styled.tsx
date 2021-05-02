@@ -22,10 +22,15 @@ export const Wrapper = styled.div`
 `;
 
 const rotate = keyframes`  
-0%   {color: red;}
-25%  {color: yellow;}
-50%  {color: blue;}
-100% {color: green;}
+0%   {color: #f50057;}
+10% {color: #4deeea;}
+25%  {color: #AC00FF;}
+35%  {color: #09EAE1;}
+45%  {color: #F62BFD;}
+55%  {color: #ffea00;}
+60%  {color: #1769aa;}
+75%  {color: #FD3004;}
+100% {color: #74ee15;}
 `;
 type Color = {
   color: string;
@@ -36,7 +41,6 @@ export const Title = styled.h1<Color>`
   padding: 0px;
   margin: 0px;
   font-size: 100px;
-
   ${(props) =>
     props.animation
       ? css`
@@ -78,6 +82,14 @@ export const Colors = styled.div<Color>`
   height: 90px;
   margin: 0px;
   width: 50vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:bold;
+
+  text-transform:uppercase;
+  font-size:30px;
+  color:#110d0d;
   background-color: ${(props) => props.color};
 
   &:first-child {
