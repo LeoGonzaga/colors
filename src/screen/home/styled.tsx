@@ -4,6 +4,10 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  min-width: 400px;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftColumn = styled.div`
@@ -14,11 +18,17 @@ export const LeftColumn = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    padding: 30px;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 40px;
 `;
 
 const rotate = keyframes`  
@@ -77,19 +87,21 @@ export const ColorsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  min-width: 400px;
+  width:100%;
 `;
 export const Colors = styled.div<Color>`
   height: 90px;
   margin: 0px;
   width: 50vw;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 
-  text-transform:uppercase;
-  font-size:30px;
-  color:#110d0d;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #110d0d;
   background-color: ${(props) => props.color};
 
   &:first-child {
@@ -98,5 +110,16 @@ export const Colors = styled.div<Color>`
 
   &:last-child {
     border-bottom-right-radius: 50px;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    &:first-child {
+      border-top-right-radius: 0px;
+    }
+
+    &:last-child {
+      border-bottom-right-radius: 0px;
+    }
   }
 `;
