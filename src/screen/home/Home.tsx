@@ -23,7 +23,6 @@ const HomeScreen = (): JSX.Element => {
     let newColors = [];
     for (let index = 0; index < 5; index++) {
       let color = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
-      console.log(color);
       newColors.push(color);
     }
 
@@ -33,6 +32,8 @@ const HomeScreen = (): JSX.Element => {
   useEffect(() => {
     generetedColors();
   }, []);
+
+
   return (
     <Container>
       <LeftColumn>
@@ -47,8 +48,10 @@ const HomeScreen = (): JSX.Element => {
       </LeftColumn>
       <RightColumn>
         <ColorsContainer>
-          {colors.map((color, index) => (
-            <Colors key={index} color={color} />
+          {colors?.map((color, index) => (
+            <Colors key={index} color={color}>
+              {color}
+            </Colors>
           ))}
         </ColorsContainer>
       </RightColumn>
