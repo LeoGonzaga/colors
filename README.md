@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido utlizando:
 
 * TypeScript
 * NextJs
-* Stlyed-Components
+* Styled-Components
 
 # :construction_worker: How to run
 ```bash
