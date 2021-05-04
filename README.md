@@ -16,7 +16,7 @@
 
 </p>
 
-> :rocket: Aplicação web desenvolvida para gerar paleta de cores. Foi criada com o intuito de ensinar como programar em react.
+> :rocket: Aplicação web desenvolvida para gerar paleta de cores.
 
 > Veja o resultado em: https://colors-sand.vercel.app
 
